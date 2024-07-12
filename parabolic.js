@@ -1,26 +1,3 @@
-class Parabolic {
-    
-    constructor() {
-        let X = 10;//M
-        let Y = 10;//N
-        let a = 0.5;
-        let h = 0.5;
-        let k = 0.25;
-        let b = k*a/(h*h);
-        let t;
-
-        let f = new Array(X); // 要素数5の配列(array)を作成
-        for (let x = 0; x < X; x++) {
-            f[x] = new Array(5); // 配列(array)の各要素に対して、要素数5の配列を作成
-            for (let y = 0; y < 5; y++) {
-                f[x][y] = 0; // 0で初期化
-            }
-        }
-
-
-    }
-}
-
 const guisetup=()=> {
     let X = 10;//M
     let Y = 10;//N
