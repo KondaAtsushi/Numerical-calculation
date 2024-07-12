@@ -161,6 +161,7 @@ const guisetup=()=> {
 
         let b = k*a/(h*h)/5;
 
+        //h=k=1のときの差分方程式
         // Initialize initial condition
         for (let i = 0; i < X; i++) {
             f[i][0] = 3.0 * i * h * (i * h - 9.0) + Number(input_temp.value);
@@ -176,14 +177,32 @@ const guisetup=()=> {
             for (let i = 1; i < X - 1; i++) {
                 f[i][j + 1] =b * (f[i + 1][j]+ f[i - 1][j]);
             }
-    }   
+        }
+
+        //通常の差分方程式
+        //もし、hとkの値を変えれるようになったときにしようする。
+        // Initialize initial condition
+        for (let i = 0; i < X; i++) {
+            f[i][0] = 3.0 * i * h * (i * h - 9.0) + Number(input_temp.value);
+        }
+
+        // Set boundary conditions
+        for (let j = 1; j < Y; j++) {
+        f[0][j] = f[X - 1][j] = Number(input_temp.value);
+        }
     
-    //境界条件によって状態変化図に色を付ける
-    vc1.forecolor(254, 254, 21, 1);
-    vc1.beginPath();
-    vc1.line(-3.15,3.5,-3.15,10.5)
-    vc1.line(3.15,3.5,3.15,10.5)
-    vc1.stroke();
+        // Compute using explicit finite difference method
+        for (let j = 0; j < Y - 1; j++) {
+            for (let i = 1; i < X - 1; i++) {
+                f[i][j + 1] =f[i][j]+b * (f[i + 1][j]-2*f[i][j]+ f[i - 1][j]);
+            }
+        }
+        //境界条件によって状態変化図に色を付ける
+        vc1.forecolor(254, 254, 21, 1);
+        vc1.beginPath();
+        vc1.line(-3.15,3.5,-3.15,10.5)
+        vc1.line(3.15,3.5,3.15,10.5)
+        vc1.stroke();
 
     });
 
