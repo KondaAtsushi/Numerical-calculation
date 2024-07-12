@@ -1,0 +1,112 @@
+@charset "UTF-8";
+
+#main {
+	width: 820px;
+	height: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px;
+}
+
+#panel{
+	float: left;
+	width:180px;
+	height:700px;
+}
+
+.nomal{
+	width: 100px;
+	height:50px;
+}
+
+.dimension{
+	width: 60px;
+	height:40px;
+}
+
+.tablet{
+	width: 40px;
+	height:40px;
+}
+
+.decide{
+	width: 50px;
+	height:30px;
+}
+
+.place{
+	width: 50px;
+	height:40px;
+}
+
+#area {
+	/*background-color: rgb(214, 255, 255);**/
+	width: 360px;
+	height: 360px;
+	border:1px solid #000000;
+}
+
+#graph1{
+	border:2px solid #000000;
+}
+
+#graph12{
+	border:1px solid #000000;
+}
+
+#area2 {
+	background: linear-gradient(to bottom, rgba(255, 0, 0, 0.795),yellow, rgba(0, 255, 76, 0.795),rgba(0, 4, 255, 0.781));
+	width: 50px;
+	height: 360px;
+	margin:10px;
+	border:1px solid #000000;
+}
+
+#area3 {
+	/*background-color: rgb(214, 255, 255);**/
+	width: 360px;
+	height: 360px;
+	border:3px solid #1ea9dc;
+}
+
+.a2 {
+	margin-top: 10px;
+	float: left;
+	position: relative;
+}
+
+.can {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	left: 0;
+	top: 0;
+}
+
+.recan{
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	left: 0;
+	top: 0;
+}
+
+p span{
+	border:solid 3px#29d1d1
+}
+
+th{
+	width:50px;
+}
+
+.tb{
+    width: 30%;
+	height: 20px;
+    table-layout: fixed;
+}
+
+.tb td:first-child{
+    width: 50px;
+}
+
+

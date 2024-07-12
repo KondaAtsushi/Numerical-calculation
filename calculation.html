@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>放物型偏微分方程式のシミュレーション</title>
+	<link rel="stylesheet" href="calculation.css">
+	<script src="parabolic.js"defer></script>
+	<script src="nylon.js"></script>
+	<script src="vcanvas.js"></script>
+	<script src="vbtimer.js"></script>
+	
+</head>
+
+<body>
+	<p>
+	<h1>放物型偏微分方程式のシミュレーション</h1>
+	</p>
+	<div id="con">
+		<div id="panel">
+			<div>
+				<p id="etime"></p>
+				<button type="button" id="start" class="nomal">start</button>
+				<button type="button" id="stop" class="nomal" >stop</button>
+				<button type="button" id="clear" class="nomal">clear</button>
+			</div>
+			<div>
+				<p><span>次元数</span></p>
+				<button type="button" id="d1" class="dimension">1次元</button>
+				<button type="button" id="d2" class="dimension">2次元</button>
+			</div>
+			<div>
+				<p><span>伝熱材</span></p>
+				<p id="tab"></p>
+				<button type="button" id="gold" class="tablet">金</button>
+				<button type="button" id="silver" class="tablet">銀</button>
+				<button type="button" id="bronze" class="tablet">銅</button>
+			</div>
+			<div>
+				<p><span>初期温度</span></p>
+				<input type="text" id="temp"  size="5">
+				<button type="botton" id="decide" class="decided">設定</button>
+				<div id="Text"></div>
+			</div>
+			<div>
+				<p><span>初期位置(2D)</span></p>
+				<button type="button" id="p1" class="place">左上</button>
+				<button type="button" id="p2" class="place">右上</button>
+				<button type="button" id="p3" class="place">中心</button>
+				<button type="button" id="p4" class="place">左下</button>
+				<button type="button" id="p5" class="place">右下</button>
+			</div>
+		</div>
+		<div id="main">
+			<div id="area" class="a2">
+				<canvas class="can" id="graph1" width="360" height="360"></canvas>
+				<canvas class="recan" id="graph12" width="360" height="360"></canvas>
+				<canvas class="recan" id="graph13" width="360" height="360"></canvas>
+			</div>
+			<div id="area2" class="a2">
+				<p>温度</p>
+				<canvas class="can" id="graph2" width="325" height="20"></canvas>
+				<canvas class="recan" id="graph22" width="350" height= "20"></canvas>
+			</div>
+		</div>
+			<table id="tb1" border="1" class="tb" style="border-collapse:collapse;">
+				<tr>
+					<th>x=1</th>
+					<th>x=2</th>
+					<th>x=3</th>
+					<th>x=4</th>
+					<th>x=5</th>
+					<th>x=6</th>
+					<th>x=7</th>
+					<th>x=8</th>
+					<th>x=9</th>
+					<th>x=10</th>
+				</tr>
+			</table>
+	</div>
+</body>
+</html>
