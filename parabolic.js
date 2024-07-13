@@ -1,15 +1,15 @@
 const guisetup=()=> {
-    let X = 10;//M
-    let Y = 10;//N
+    let X = 10;
+    let Y = 100;
     let h = 1;
     let k = 5;
     var count=0;
 
-    let f = new Array(X); // 要素数5の配列(array)を作成
-    for (let x = 0; x < X; x++) {
-        f[x] = new Array(5); // 配列(array)の各要素に対して、要素数5の配列を作成
-        for (let y = 0; y < 5; y++) {
-            f[x][y] = 0; // 0で初期化
+    let f = new Array(X); // 要素数Xの配列(array)を作成
+    for (let i = 0; i < X; i++) {
+        f[i] = new Array(Y); // 配列(array)の各要素に対して、要素数Yの配列を作成
+        for (let j = 0; j < Y; j++) {
+            f[i][j] = 0; // 0で初期化
         }
     }
 
@@ -80,29 +80,21 @@ const guisetup=()=> {
     });
 
     //一端 ボタンが押されたとき
+    //未実装
     document.querySelector("#d1").addEventListener("click",()=>{
         vc1.cls();
         document.querySelector("#d1").disabled=true;
         document.querySelector("#d2").disabled=false;
-        document.querySelector("#p1").disabled=true;
-        document.querySelector("#p2").disabled=true;
-        document.querySelector("#p3").disabled=true;
-        document.querySelector("#p4").disabled=true;
-        document.querySelector("#p5").disabled=true;
     });
 
     //両端 ボタンが押されたとき
     document.querySelector("#d2").addEventListener("click",()=>{
         document.querySelector("#d1").disabled=false;
         document.querySelector("#d2").disabled=true;
-        document.querySelector("#p1").disabled=false;
-        document.querySelector("#p2").disabled=false;
-        document.querySelector("#p3").disabled=false;
-        document.querySelector("#p4").disabled=false;
-        document.querySelector("#p5").disabled=false;
     });
 
     //金 ボタンが押されたとき
+    //適用されず
     document.querySelector("#gold").addEventListener("click",()=>{
         let a=0.424;
         document.querySelector("#bronze").disabled=false;
@@ -113,6 +105,7 @@ const guisetup=()=> {
     });
 
     //銀 ボタンが押されたとき
+    //適用されず
     document.querySelector("#silver").addEventListener("click",()=>{
         let a=0.613;
         document.querySelector("#bronze").disabled=false;
@@ -123,6 +116,7 @@ const guisetup=()=> {
     });
 
     //銅 ボタンが押されたとき
+    //適用されず
     document.querySelector("#bronze").addEventListener("click",()=>{
         let a=0.360;
         document.querySelector("#bronze").disabled=true;
@@ -169,7 +163,7 @@ const guisetup=()=> {
 
         // Set boundary conditions
         for (let j = 1; j < Y; j++) {
-        f[0][j] = f[X - 1][j] = Number(input_temp.value);
+            f[0][j] = f[X - 1][j] = Number(input_temp.value);
         }
     
         // Compute using explicit finite difference method
@@ -182,7 +176,7 @@ const guisetup=()=> {
         //通常の差分方程式
         //もし、hとkの値を変えれるようになったときにしようする。
         // Initialize initial condition
-        for (let i = 0; i < X; i++) {
+        /*for (let i = 0; i < X; i++) {
             f[i][0] = 3.0 * i * h * (i * h - 9.0) + Number(input_temp.value);
         }
 
@@ -196,7 +190,7 @@ const guisetup=()=> {
             for (let i = 1; i < X - 1; i++) {
                 f[i][j + 1] =f[i][j]+b * (f[i + 1][j]-2*f[i][j]+ f[i - 1][j]);
             }
-        }
+        }*/
         //境界条件によって状態変化図に色を付ける
         vc1.forecolor(254, 254, 21, 1);
         vc1.beginPath();
