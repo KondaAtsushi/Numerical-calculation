@@ -55,11 +55,50 @@
 }
 
 #area2 {
-	background: linear-gradient(to bottom, rgba(255, 0, 0, 0.795),yellow, rgba(0, 255, 76, 0.795),rgba(0, 4, 255, 0.781));
-	width: 50px;
+	
+	width: 200px;
 	height: 360px;
 	margin:10px;
-	border:1px solid #000000;
+	border:3px solid #21d3e7;
+}
+
+
+#brack{
+	background-color: #000000;
+}
+#d-vio{
+	background-color: #4C0099;
+}
+#vio{
+	background-color: #B266FF;
+}
+#blue{
+	background-color: #0000FF;
+}
+#sky-blue{
+	background-color: #00FFFF;
+}
+#green{
+	background-color: #00FF00;
+}
+#yellow{
+	background-color: #FFFF00;
+}
+#orange{
+	background-color: #FF8000;
+}
+#red{
+	background-color: #FF0000;
+}
+#blood{
+	background-color: #990000;
+}
+#brown{
+	background-color: #660000;
+}
+
+.clr{
+	border:2px solid black;
 }
 
 #area3 {
@@ -108,5 +147,3 @@ th{
 .tb td:first-child{
     width: 50px;
 }
-
-
