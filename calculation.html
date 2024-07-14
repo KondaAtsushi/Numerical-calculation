@@ -24,30 +24,23 @@
 				<button type="button" id="clear" class="nomal">clear</button>
 			</div>
 			<div>
-				<p><span>次元数</span></p>
-				<button type="button" id="d1" class="dimension">1次元</button>
-				<button type="button" id="d2" class="dimension">2次元</button>
+				<p><span>①温度場</span></p>
+				<button type="button" id="d1" class="dimension">一端</button>
+				<button type="button" id="d2" class="dimension">両端</button>
 			</div>
 			<div>
-				<p><span>伝熱材</span></p>
+				<p><span>②温度伝導率</span></p>
 				<p id="tab"></p>
 				<button type="button" id="gold" class="tablet">金</button>
 				<button type="button" id="silver" class="tablet">銀</button>
 				<button type="button" id="bronze" class="tablet">銅</button>
+				<button type="button" id="hk1" class="tablet">0.5</button>
 			</div>
 			<div>
-				<p><span>初期温度</span></p>
+				<p><span>③初期温度</span></p>
 				<input type="text" id="temp"  size="5">
 				<button type="botton" id="decide" class="decided">設定</button>
 				<div id="Text"></div>
-			</div>
-			<div>
-				<p><span>初期位置(2D)</span></p>
-				<button type="button" id="p1" class="place">左上</button>
-				<button type="button" id="p2" class="place">右上</button>
-				<button type="button" id="p3" class="place">中心</button>
-				<button type="button" id="p4" class="place">左下</button>
-				<button type="button" id="p5" class="place">右下</button>
 			</div>
 		</div>
 		<div id="main">
@@ -58,12 +51,34 @@
 			</div>
 			<div id="area2" class="a2">
 				<p>温度</p>
-				<canvas class="can" id="graph2" width="325" height="20"></canvas>
-				<canvas class="recan" id="graph22" width="350" height= "20"></canvas>
+				<canvas class="can" id="graph2" width="200" height="360"></canvas>
+				<b>
+				0℃↓    <canvas class="clr" id="brack" width="95" height="15"></canvas>
+				<br>
+				10℃    <canvas class="clr" id="d-vio" width="100" height="15"></canvas>
+				<br>
+				20℃    <canvas class="clr" id="vio" width="100" height="15"></canvas>
+				<br>
+				30℃    <canvas class="clr" id="blue" width="100" height="15"></canvas>
+				<br>
+				40℃    <canvas class="clr" id="sky-blue" width="100" height="15"></canvas>
+				<br>
+				50℃    <canvas class="clr" id="green" width="100" height="15"></canvas>
+				<br>
+				60℃    <canvas class="clr" id="yellow" width="100" height="15"></canvas>
+				<br>
+				70℃    <canvas class="clr" id="orange" width="100" height="15"></canvas>
+				<br>
+				80℃    <canvas class="clr" id="red" width="100" height="15"></canvas>
+				<br>
+				90℃  <canvas class="clr" id="blood" width="100" height="15"></canvas>
+				<br>
+				100℃↑  <canvas class="clr" id="brown" width="75" height="15"></canvas>
+				</b>
 			</div>
-
 			<table id="tb1" border="1" class="tb" style="border-collapse:collapse;">
 				<tr>
+					<th>x=0</th>
 					<th>x=1</th>
 					<th>x=2</th>
 					<th>x=3</th>
@@ -73,10 +88,10 @@
 					<th>x=7</th>
 					<th>x=8</th>
 					<th>x=9</th>
-					<th>x=10</th>
 				</tr>
 			</table>
 		</div>
 	</div>
 </body>
+
 </html>
